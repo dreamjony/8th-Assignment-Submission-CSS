@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.box {
+    width: 350px;
+    height: 400px;
+    background-color: #cecaca;
+    border: 1px solid #2c3e50; /* Set your desired border color */
+    overflow: hidden; /* Ensures the image stays within the box */
+    text-align: center; /* Center text within the box */
+    transition: box-shadow 0.3s ease; /* Add transition for smoother hover effect */
+    margin: 5px; /* Add margin for spacing between boxes */
+    position: relative; /* Position for absolute positioning of before and after images */
+}
+
+.box img {
+    width: 100%;
+    height: 70%; /* Adjust the height of the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the box */
+    transition: transform 0.3s ease; /* Add transition for smoother hover effect on the image */
+}
+
+.box p {
+    margin: 10px;
+}
+
+.box:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Add box shadow on hover */
+}
+
+.box:hover img {
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+
+/* Additional styles for before and after images */
+.box .before-image,
+.box .after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add transition for smoother hover effect on the images */
+}
+
+.box:hover .before-image,
+.box:hover .after-image {
+    opacity: 1; /* Show the images on hover */
+}
+
+/* Center and align the contact form */
+.contact-form {
+    max-width: 400px; /* Adjust the maximum width */
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px; /* Add padding for better spacing */
+    border: 5px solid #ddd; /* Add a border for better visibility */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    transition: box-shadow 0.2s ease;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    
+}
+
+.contact-form form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form label {
+    display: block;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #27ae60;
+}
+
+.contact-form:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+}
